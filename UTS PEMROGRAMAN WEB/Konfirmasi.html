@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Konfirmasi Pemesanan | Rental Kendaraan</title>
+    <link rel="stylesheet" href="CSS/style.css">
+</head>
+<body>
+
+    <!-- Main Content -->
+    <main class="dashboard-content">
+        <h1>Konfirmasi Pemesanan</h1>
+        <p>Terima kasih telah melakukan pemesanan! Berikut adalah detail pemesanan Anda:</p>
+
+        <div class="confirmation-details">
+            <h2>Detail Pemesanan</h2>
+            <p><strong>Nama Lengkap:</strong> <span id="nama-detail"></span></p>
+            <p><strong>Kontak:</strong> <span id="kontak-detail"></span></p>
+            <p><strong>Jenis Kendaraan:</strong> <span id="kendaraan-detail"></span></p>
+            <p><strong>Tanggal Sewa:</strong> <span id="tanggal-sewa-detail"></span></p>
+            <p><strong>Durasi:</strong> <span id="durasi-detail"></span> hari</p>
+        </div>
+
+        <button class="btn-home"><a href="Tabel.html">Kembali ke Daftar Kendaraan</a></button>
+    </main>
+
+    <script>
+        // Mengambil data dari URL query string (GET) jika tersedia
+        const urlParams = new URLSearchParams(window.location.search);
+        document.getElementById('nama-detail').textContent = urlParams.get('nama') || 'Tidak Diketahui';
+        document.getElementById('kontak-detail').textContent = urlParams.get('kontak') || 'Tidak Diketahui';
+        document.getElementById('kendaraan-detail').textContent = urlParams.get('kendaraan') || 'Tidak Diketahui';
+        document.getElementById('tanggal-sewa-detail').textContent = urlParams.get('tanggal-sewa') || 'Tidak Diketahui';
+        document.getElementById('durasi-detail').textContent = urlParams.get('durasi') || 'Tidak Diketahui';
+    </script>
+</body>
+</html>

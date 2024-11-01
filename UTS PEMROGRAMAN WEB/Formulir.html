@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulir Pemesanan | Rental Kendaraan</title>
+    <link rel="stylesheet" href="CSS/style.css">
+</head>
+<body>
+
+    <!-- Main Content -->
+    <main class="dashboard-content">
+        <h1>Formulir Pemesanan</h1>
+        <p>Isi formulir di bawah ini untuk melakukan pemesanan kendaraan.</p>
+
+        <form class="order-form" action="Konfirmasi.html" method="GET">
+            <label for="nama">Nama Lengkap</label>
+            <input type="text" id="nama" name="nama" required>
+
+            <label for="kontak">Kontak</label>
+            <input type="text" id="kontak" name="kontak" required>
+
+            <label for="kendaraan">Jenis Kendaraan</label>
+            <select id="kendaraan" name="kendaraan" required>
+                <option value="Toyota Avanza">Toyota Avanza</option>
+                <option value="Honda CR-V">Honda CR-V</option>
+                <option value="Daihatsu Xenia">Daihatsu Xenia</option>
+                <option value="Toyota Fortuner">Toyota Fortuner</option>
+            </select>
+
+            <label for="tanggal-sewa">Tanggal Sewa</label>
+            <input type="date" id="tanggal-sewa" name="tanggal-sewa" required>
+
+            <label for="durasi">Durasi (Hari)</label>
+            <input type="number" id="durasi" name="durasi" min="1" required>
+               
+                <button type="submit" class="btn-submit">Kirim Pemesanan</button>
+            </form>
+            
+        </form>
+    </main>
+
+</body>
+</html>
